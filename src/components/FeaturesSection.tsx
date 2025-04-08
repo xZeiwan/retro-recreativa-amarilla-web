@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Monitor, Gamepad, Speaker, Chip, Database, ShieldCheck } from 'lucide-react';
+import { Monitor, Gamepad, Speaker, Cpu, Database, ShieldCheck } from 'lucide-react';
 
 type Feature = {
   id: number;
@@ -30,7 +30,7 @@ const features: Feature[] = [
   },
   {
     id: 4,
-    icon: Chip,
+    icon: Cpu,
     title: "Raspberry Pi",
     description: "Utiliza una Raspberry Pi como cerebro de tu máquina, permitiendo ejecutar miles de juegos retro."
   },
