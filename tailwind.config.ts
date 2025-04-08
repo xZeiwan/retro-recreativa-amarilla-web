@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Colores retro para la máquina recreativa
+				retro: {
+					dark: '#121212',
+					yellow: '#FFD600',
+					red: '#FF5252',
+					blue: '#0091EA',
+					green: '#00C853',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +93,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pixel-pulse': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' },
+				},
+				'flicker': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pixel-pulse': 'pixel-pulse 3s infinite ease-in-out',
+				'flicker': 'flicker 2s infinite',
+			},
+			fontFamily: {
+				'pixel': ['"Press Start 2P"', 'cursive'],
+				'arcade': ['"Arcade"', 'monospace'],
 			}
 		}
 	},
